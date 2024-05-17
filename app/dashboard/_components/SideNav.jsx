@@ -1,3 +1,4 @@
+import { GraduationCap, Hand, LayoutIcon, Settings } from 'lucide-react';
 import Image from 'next/image'
 import React from 'react'
 
@@ -8,21 +9,25 @@ function SideNav() {
             id: 1,
             name: 'Dashboard',
             path: '/dashboard',
+            icon: LayoutIcon
         },
         {
             id: 2,
             name: 'Students',
             path: '/dashboard/students',
+            icon: GraduationCap
         },
         {
             id: 3,
             name: 'Attendance',
             path: '/dashboard/attendance',
+            icon: Hand
         },
         {
             id: 4,
             name: 'Settings',
             path: '/dashboard/settings',
+            icon: Settings
         },
     ];
 
@@ -38,6 +43,7 @@ function SideNav() {
                 transition-all
                 cursor-pointer
                 rounded-lg'>
+                    <menu.icon />
                     {menu.name}
                 </h2>
             ))}
